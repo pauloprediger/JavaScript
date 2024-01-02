@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: rgba(32, 178, 171, 0.658);
+            text-align: center;
+            padding-top: 50px;
+            line-height: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+        document.write(`Olá <strong>${nome}</strong><br>Olá ${nome.toUpperCase()}<br>Olá ${nome.toLowerCase()}<br>Olá ${nome.replace('a','o')}`)
+    </script>
+</body>
+</html>
