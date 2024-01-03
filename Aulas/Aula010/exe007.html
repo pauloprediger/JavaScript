@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando árvore DOM</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            text-align: center;
+            background-color: lightgreen;
+        }
+        main{
+            width: 75vw;
+            height: 60vh;
+            background-color: white;
+            margin: auto;
+            box-sizing: border-box;
+            border-radius: 10px 10px 0px 0px;
+            box-shadow: 0px 0px 5px black;
+        }
+        h1{
+            box-sizing: border-box;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: lightseagreen;
+            width: 100%;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px 10px 0px 0px;
+        }
+        main > p{
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 2em;
+            text-indent: 30px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="titulo">Primeiros estudos com DOM</h1>
+        <p>
+            <label for="num1_id">Entre com o 1º número:</label>
+            <input type="number" name="num1" id="num1_id" required>
+        </p>
+        <p>
+            <label for="num2_id">Entre com o 2º número:</label>
+            <input type="number" name="num2" id="num2_id" required>
+        </p>
+        <p>
+            <input type="button" value="Enviar" id="send_id" onclick="soma()">
+        </p>
+        <p id = "resp">
+        </p>
+        <script>
+            function soma(){
+                var tnum1 = window.document.getElementById('num1_id')
+                var tnum2 = window.document.getElementById('num2_id')
+                var res = window.document.getElementById('resp')
+                var num1 = Number(tnum1.value)
+                var num2 = Number(tnum2.value)
+                var s = num1 + num2
+                res.innerHTML = (`A soma de ${num1} + ${num2} é: ${s}`) 
+            }
+        </script>
+    </main>
+</body>
+</html>
