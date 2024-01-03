@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando árvore DOM</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            text-align: center;
+            background-color: lightgreen;
+        }
+        main{
+            width: 75vw;
+            height: 60vh;
+            background-color: white;
+            margin: auto;
+            box-sizing: border-box;
+            border-radius: 10px 10px 0px 0px;
+            box-shadow: 0px 0px 5px black;
+        }
+        h1{
+            box-sizing: border-box;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: lightseagreen;
+            width: 100%;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px 10px 0px 0px;
+        }
+        main > p{
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 2em;
+            text-indent: 30px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="titulo" onmouseenter="mouse()" onclick="clicar()" onmouseout="desclicar()">Primeiros estudos com DOM</h1>
+        <p id="prim">Estou Aprendendo a usar DOM, parece ser muito divertido, estou gostando!</p>
+        <script>
+            var header1 = window.document.querySelector('h1#titulo')
+            function clicar(){
+                header1.innerText = 'Clicou'
+            }
+            function mouse(){
+                header1.innerText = 'Passou mouse em cima'
+                header1.style.background = 'purple'
+            }
+            function desclicar(){
+                header1.innerText = 'Primeiros estudos com DOM'
+                header1.style.background = 'lightseagreen'
+            }
+        </script>
+    </main>
+</body>
+</html>
