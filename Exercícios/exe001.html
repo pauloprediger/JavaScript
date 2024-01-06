@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hora do Dia</title>
+    <style>
+        *{
+           padding: 0px;
+           margin: 0px;
+           font-family: Arial, Helvetica, sans-serif;
+           box-sizing: border-box;
+        }
+        body{
+            background-color: #C7B78A   ;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            padding: 30px;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        }
+        section{
+            display: block;
+            margin: auto;
+            width: 40vw;
+            height: 50vh;
+            background-color: white;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
+        }
+        section p#txtP{
+            text-align: center;
+            font-size: 1.5em;
+            padding: 20px;
+            font-weight: lighter;
+        }
+        p{
+            text-align: center;
+        }
+        footer > p{
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+            font-size: 1.2em;
+        }
+        footer > p:hover{
+            text-decoration: underline;
+        }
+        span{
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+        img{
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body id="corpo">
+    <h1>Hora dia</h1>
+    <section>
+        <p id="txtP">
+            
+        </p>
+        <span id="img">
+        </span>
+    </section>
+    <footer>
+         <p>
+            <strong>Paulo Prediger</strong>
+         </p>
+    </footer>
+    <script>
+        const data = new Date()
+        const hora = data.getHours()
+        const min = data.getMinutes()
+        const corpo = window.document.getElementById('corpo')
+
+        var txtP = window.document.getElementById('txtP')
+        var imgD = window.document.getElementById('img')
+        /*var Nhora = Number(hora)*/
+        var Nhora = 12;
+        
+        txtP.innerHTML = `Agora são ${hora} Horas e ${min} minutos:`
+        if((Nhora >=6) && (Nhora < 12)){
+            corpo.style.backgroundColor = "#C7B78A"
+            document.getElementById('img').innerHTML = "<img src='imagens/manha.jpg'>"
+        }else if((Nhora >= 12) && (Nhora < 18)){
+            corpo.style.backgroundColor = "#A57865" 
+            document.getElementById('img').innerHTML = "<img src='imagens/tarde.jpg'>"
+        }else{
+            corpo.style.backgroundColor = "#655577"
+            document.getElementById('img').innerHTML = "<img src='imagens/noite.jpg'>"
+        }
+    </script>
+</body>
+</html>
