@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos/style.css">
     <title>Hora do Dia</title>
 </head>
 <body id="corpo">
-    <h1>Hora dia</h1>
+    <header>
+        <h1>Hora dia</h1>
+    </header>
     <section>
         <p id="txtP">
             
@@ -27,9 +29,8 @@
         const corpo = window.document.getElementById('corpo')
 
         var txtP = window.document.getElementById('txtP')
-        var imgD = window.document.getElementById('img')
-        /*var Nhora = Number(hora)*/
-        var Nhora = 12;
+        
+        Nhora = Number(hora)
         
         txtP.innerHTML = `Agora são ${hora} Horas e ${min} minutos:`
         if((Nhora >=6) && (Nhora < 12)){
