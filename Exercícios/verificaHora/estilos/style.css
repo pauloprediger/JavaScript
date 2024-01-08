@@ -38,6 +38,7 @@
      color: white;
      padding-top: 20px;
      font-size: 1.2em;
+     font-style: italic;
  }
  footer > p:hover{
      text-decoration: underline;

@@ -11,23 +11,20 @@
     <section>
         <p>
             <label for="age_id">Ano Nascimento:</label> 
-            <input type="number" name="age" id="age_id" required>
+            <input type="number" name="age" id="age_id" min="1900">
             <br>
             Sexo:
             <label for="M_id">Masculino</label>
-            <input type="radio" name="sexo" id="sex_id" value="masculino" required>
+            <input type="radio" name="sexo" id="M_id" value="masculino">
             <label for="F_id">Feminino</label>
-            <input type="radio" name="sexo" id="sex_id" value="feminino" required>
+            <input type="radio" name="sexo" id="F_id" value="feminino">
             <br>
         </p>
         <p style="text-align: center">
             <input type="button" value="Enviar" onclick="verifica()">
         </p>
-        
-        <span id="img">
-        </span>
-
         <p id="txtP">
+            Ente com os dados acima para ver o resultado
         </p>
     </section>
     <footer>
@@ -35,44 +32,6 @@
             <strong>Paulo Prediger</strong>
          </p>
     </footer>
-    <script>
-        function verifica(){
-            const sexo = window.document.querySelector('input[id=sex_id]:checked').value
-            const txtAno = window.document.getElementById('age_id').value
-            
-            var txtP = window.document.getElementById('txtP')
-            var imgD = window.document.getElementById('img')
-            var nAno = Number(txtAno)
-            const age = new Date();
-            var anoA = age.getFullYear()
-            var idade = anoA - nAno
-    
-            if(idade >= 0){
-                switch(sexo){
-                    case 'masculino':
-                        if(idade < 18){
-                            document.getElementById('img').innerHTML = "<img src='imagens/homemC.jpg'>"
-                        }else if((idade >= 18) && (idade < 65)){
-                            document.getElementById('img').innerHTML = "<img src='imagens/homemA.jpg'>"
-                        }else{
-                            document.getElementById('img').innerHTML = "<img src='imagens/homemI.jpg'>"
-                        }
-                        break
-                    case 'feminino':
-                        if(idade < 18){
-                            document.getElementById('img').innerHTML = "<img src='imagens/mulherC.jpg'>"
-                        }else if((idade >= 18) && (idade < 65)){
-                            document.getElementById('img').innerHTML = "<img src='imagens/mulherA.jpg'>"
-                        }else{
-                            document.getElementById('img').innerHTML = "<img src='imagens/mulherI.jpg'>"
-                        }
-                        break
-                }
-                txtP.innerHTML = `Você nasceu em: ${nAno}, é do sexo ${sexo} e tem ${idade} anos`
-            }else{
-                txtP.innerHTML = `[ERRO] Ano de nascimento invalido`
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
