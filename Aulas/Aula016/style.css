@@ -17,16 +17,13 @@ section{
     text-align: left;
     background-color: white;
     padding: 20px;
-    width: 70vw;
+    width: 80vw;
     margin: auto;
 }
 section p{
     line-height: 2em;
 }
-.classe{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2em;
-}
+
 footer{
     color: white;
     font-size: 1.5em;

@@ -7,18 +7,25 @@
     <title>Tabuada</title>
 </head>
 <body>
-    <h1>Tabuada</h1>
+    <h1>Adicionar Números</h1>
     <section>
-        <p style="margin-bottom: 20px;" class="classe">
-            <label for="num_id">Número:</label>
+        <p style="margin-bottom: 20px;">
+            <label for="num_id">Número entre 1 e 100:</label>
             <input type="number" name="num" id="num_id">
-            <input type="button" value="Gerar Tabuada" onclick="gerar()">
+            <input type="button" value="Adicionar Número" onclick="adicionar()">
         </p>
         <select name="tab" id="tab_id" size="11">
 
         </select>
+        <br>
+        <p style="text-align: center;">
+            <input type="button" value="Resultados">
+        </p>
+        <p id="res">
+
+        </p>
     </section>
     <footer>Paulo Prediger</footer>
-    <script src="script02.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
