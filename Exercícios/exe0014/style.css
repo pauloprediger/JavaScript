@@ -1,0 +1,39 @@
+@charset "UTF-8";
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: lightblue;
+    text-align: center;
+}
+h1{
+    padding: 20px;
+}
+section{
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    width: 70vw;
+    margin: auto;
+}
+section p{
+    line-height: 2em;
+}
+p.classe{
+    font-family: 'Courier New', Courier, monospace;
+}
+footer{
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.39);
+}
+select{
+    display: block;
+    margin: auto;
+    width: 60%;
+}

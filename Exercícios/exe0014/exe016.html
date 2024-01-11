@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Laços de Repetição</title>
+</head>
+<body id="corpo">
+    <h1>Vamos contar</h1>
+    <section>
+        <p>
+            <label for="numIni_id">Inicio:</label> 
+            <input type="number" name="numIni" id="numIni_id">
+            <br>
+            <label for="numFim_id">Fim:</label>
+            <input type="number" name="numFim" id="numFim_id">
+            <br>
+            <label for="passo_id">Intervalo:</label>
+            <input type="number" name="passo" id="passo_id">
+        </p>
+        <p style="text-align: center">
+            <input type="button" value="Contar" onclick="contar()">
+        </p>
+        <p id="txtP">
+            Preparando a contagem...
+        </p>
+    </section>
+    <footer>
+         <p>
+            <strong>Paulo Prediger</strong>
+         </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
